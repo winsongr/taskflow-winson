@@ -1,0 +1,23 @@
+info:
+  name: Register
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:8080/auth/register
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Jane Doe",
+        "email": "jane@example.com",
+        "password": "secret123"
+      }
+  auth: none
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

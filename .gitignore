@@ -1,0 +1,6 @@
+.env
+!.env.example
+*.exe
+*.out
+.DS_Store
+docs/superpowers/

@@ -1,0 +1,33 @@
+info:
+  name: List Tasks
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: http://localhost:8080/projects/b0eebc99-9c0b-4ef8-bb6d-6bb9bd380a22/tasks
+  params:
+    query:
+      - name: status
+        value: todo
+        enabled: false
+      - name: assignee
+        value: a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11
+        enabled: false
+      - name: page
+        value: "1"
+        enabled: false
+      - name: limit
+        value: "10"
+        enabled: false
+  body:
+    type: none
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

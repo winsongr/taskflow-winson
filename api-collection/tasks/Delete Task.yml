@@ -1,0 +1,19 @@
+info:
+  name: Delete Task
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: http://localhost:8080/tasks/c0eebc99-9c0b-4ef8-bb6d-6bb9bd380a33
+  body:
+    type: none
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,26 @@
+info:
+  name: Create Task
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://localhost:8080/projects/b0eebc99-9c0b-4ef8-bb6d-6bb9bd380a22/tasks
+  body:
+    type: json
+    data: |-
+      {
+        "title": "New task from Bruno",
+        "description": "Testing task creation",
+        "priority": "high",
+        "due_date": "2026-05-01"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,19 @@
+info:
+  name: Delete Project
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: http://localhost:8080/projects/b0eebc99-9c0b-4ef8-bb6d-6bb9bd380a22
+  body:
+    type: none
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

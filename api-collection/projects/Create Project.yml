@@ -1,0 +1,24 @@
+info:
+  name: Create Project
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://localhost:8080/projects
+  body:
+    type: json
+    data: |-
+      {
+        "name": "New Project",
+        "description": "Created via Bruno"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

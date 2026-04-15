@@ -1,0 +1,25 @@
+info:
+  name: Update Task
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: http://localhost:8080/tasks/c0eebc99-9c0b-4ef8-bb6d-6bb9bd380a33
+  body:
+    type: json
+    data: |-
+      {
+        "status": "in_progress",
+        "priority": "high",
+        "assignee_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
